@@ -12,11 +12,11 @@
         vm.bigCircles = [];
         initializeCircles();
         vm.login = function(position) {
-            vm.clickToOpen();
-            // console.log("logeandome");
-            // $facebook.login().then(function() {
-            //     refresh(position);
-            // });
+            // vm.clickToOpen();
+            console.log("logeandome");
+            $facebook.login().then(function() {
+                refresh(position);
+            });
         };
 
     vm.clickToOpen = function () {

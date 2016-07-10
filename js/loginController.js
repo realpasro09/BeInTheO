@@ -32,7 +32,7 @@
             $facebook.api("/me/picture?type=normal").then(
                 function(response) {
                     // vm.circles[position].imageUrl = response.data.url;
-                    vm.bigCircles[position].isLoggedIn = true;
+                    // vm.bigCircles[position].isLoggedIn = true;
                     // vm.circles[position].previousImageUrl = response.data.url;
                 },
                 function(err) {

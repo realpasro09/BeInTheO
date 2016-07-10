@@ -37,8 +37,8 @@ Author:         Mat Przegietka
 .align-right {text-align:right}
 .float-left {float:left}
 .img_responsive {max-width: 100%}
-.img-circle {border-radius: 50%}
-
+.img-circle {border-radius: 50%; width: 80px; height: 80px}
+.img-circle:hover {cursor: pointer}
 
 /*--------------------------------------*/
 /* 2. Preloader ------------------------*/

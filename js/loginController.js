@@ -9,6 +9,7 @@
     function LoginCtrl($facebook) {
         var vm = this;
         vm.circles = [];
+        vm.bigCircles = [];
         initializeCircles();
         vm.login = function(position) {
             console.log("logeandome");
@@ -33,7 +34,12 @@
         }
 
         function initializeCircles() {
-            for (var i = 0; i < 100; i++)
+            vm.bigCircles.push({imageUrl: 'images/bigcircle1.jpg'});
+            vm.bigCircles.push({imageUrl: 'images/bigcircle2.png'});
+            vm.bigCircles.push({imageUrl: 'images/bigcircle3.png'});
+            vm.bigCircles.push({imageUrl: 'images/bigcircle4.jpg'});
+            vm.bigCircles.push({imageUrl: 'images/bigcircle5.jpg'}); 
+            for (var i = 0; i < 400; i++)
                 vm.circles.push({imageUrl: 'images/review_05.png', isLoggedIn: false, previousImageUrl: 'images/review_05.png'});
         }
 

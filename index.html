@@ -81,8 +81,22 @@
 	
 		
 		<!-- More Info #################### -->
-		
 		<section ng-controller="LoginCtrl as vm" id="more_info" data-animate-down="menu_bar-show" data-animate-up="menu_bar-hide" class="menu_bar-waypoint subsection">
+			<div class="container"  style="margin-top: 10px; margin-left:10px; margin-right: 10px; width: 100%">
+				<ul id="navlist">
+					<li ng-repeat="circle in vm.bigCircles">
+						<img ng-src="{{ circle.imageUrl }}" ng-click="vm.login($index)" ng-mouseover="vm.onMouseOver($index)"  ng-mouseleave="vm.onMouseOut($index)" alt="" class="img-bigcircle">
+					</li>
+					</ul>
+				
+
+
+			<div id="fb-root" />
+			</div>
+			
+		</section><!-- //More info -->
+
+		<section ng-controller="LoginCtrl as vm" id="more_info1" data-animate-down="menu_bar-show" data-animate-up="menu_bar-hide" class="menu_bar-waypoint subsection">
 			<div class="container"  style="margin-top: 10px; margin-left:10px; margin-right: 10px; width: 100%">
 				<ul id="navlist">
 					<li ng-repeat="circle in vm.circles">

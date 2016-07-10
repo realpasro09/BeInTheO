@@ -26,9 +26,9 @@
         function refresh(position) {
             $facebook.api("/me/picture?type=normal").then(
                 function(response) {
-                    vm.circles[position].imageUrl = response.data.url;
-                    vm.circles[position].isLoggedIn = true;
-                    vm.circles[position].previousImageUrl = response.data.url;
+                    // vm.circles[position].imageUrl = response.data.url;
+                    vm.bigCircles[position].isLoggedIn = true;
+                    // vm.circles[position].previousImageUrl = response.data.url;
                 },
                 function(err) {
 
@@ -36,13 +36,61 @@
         }
 
         function initializeCircles() {
-            vm.bigCircles.push({imageUrl: 'images/bigcircle1.jpg', isLoggedIn: true});
-            vm.bigCircles.push({imageUrl: 'images/bigcircle2.png', isLoggedIn: true});
-            vm.bigCircles.push({imageUrl: 'images/bigcircle3.png', isLoggedIn: true});
-            vm.bigCircles.push({imageUrl: 'images/bigcircle4.jpg', isLoggedIn: true});
-            vm.bigCircles.push({imageUrl: 'images/bigcircle5.jpg', isLoggedIn: true}); 
-            for (var i = 0; i < 400; i++)
-                vm.circles.push({imageUrl: 'images/review_05.png', isLoggedIn: false, previousImageUrl: 'images/review_05.png'});
+            vm.bigCircles.push({imageUrl: 'images/bigcircle1.jpg', isLoggedIn: false, previousImageUrl: 'images/bigcircle1.jpg'});
+            vm.bigCircles.push({imageUrl: 'images/bigcircle2.png', isLoggedIn: false, previousImageUrl: 'images/bigcircle2.jpg'});
+            vm.bigCircles.push({imageUrl: 'images/bigcircle3.png', isLoggedIn: false, previousImageUrl: 'images/bigcircle3.png'});
+            vm.bigCircles.push({imageUrl: 'images/bigcircle4.jpg', isLoggedIn: false, previousImageUrl: 'images/bigcircle4.jpg'});
+            vm.bigCircles.push({imageUrl: 'images/bigcircle5.jpg', isLoggedIn: false, previousImageUrl: 'images/bigcircle5.jpg'});
+            vm.circles.push({imageUrl: 'images/review_01.jpg', isLoggedIn: true});
+            vm.circles.push({imageUrl: 'images/review_02.jpg', isLoggedIn: true});
+            vm.circles.push({imageUrl: 'images/review_03.jpg', isLoggedIn: true});
+            vm.circles.push({imageUrl: 'images/review_04.jpg', isLoggedIn: true});
+            vm.circles.push({imageUrl: 'images/review_07.jpg', isLoggedIn: true});
+            vm.circles.push({imageUrl: 'images/review_08.jpg', isLoggedIn: true});
+            vm.circles.push({imageUrl: 'images/review_09.jpeg', isLoggedIn: true});
+            vm.circles.push({imageUrl: 'images/review_10.jpeg', isLoggedIn: true});
+            vm.circles.push({imageUrl: 'images/review_11.jpg', isLoggedIn: true});
+            vm.circles.push({imageUrl: 'images/review_12.jpg', isLoggedIn: true});
+            vm.circles.push({imageUrl: 'images/review_01.jpg', isLoggedIn: true});
+            vm.circles.push({imageUrl: 'images/review_02.jpg', isLoggedIn: true});
+            vm.circles.push({imageUrl: 'images/review_03.jpg', isLoggedIn: true});
+            vm.circles.push({imageUrl: 'images/review_04.jpg', isLoggedIn: true});
+            vm.circles.push({imageUrl: 'images/review_07.jpg', isLoggedIn: true});
+            vm.circles.push({imageUrl: 'images/review_08.jpg', isLoggedIn: true});
+            vm.circles.push({imageUrl: 'images/review_09.jpeg', isLoggedIn: true});
+            vm.circles.push({imageUrl: 'images/review_10.jpeg', isLoggedIn: true});
+            vm.circles.push({imageUrl: 'images/review_11.jpg', isLoggedIn: true});
+            vm.circles.push({imageUrl: 'images/review_12.jpg', isLoggedIn: true});
+            vm.circles.push({imageUrl: 'images/review_01.jpg', isLoggedIn: true});
+            vm.circles.push({imageUrl: 'images/review_02.jpg', isLoggedIn: true});
+            vm.circles.push({imageUrl: 'images/review_03.jpg', isLoggedIn: true});
+            vm.circles.push({imageUrl: 'images/review_04.jpg', isLoggedIn: true});
+            vm.circles.push({imageUrl: 'images/review_07.jpg', isLoggedIn: true});
+            vm.circles.push({imageUrl: 'images/review_08.jpg', isLoggedIn: true});
+            vm.circles.push({imageUrl: 'images/review_09.jpeg', isLoggedIn: true});
+            vm.circles.push({imageUrl: 'images/review_10.jpeg', isLoggedIn: true});
+            vm.circles.push({imageUrl: 'images/review_11.jpg', isLoggedIn: true});
+            vm.circles.push({imageUrl: 'images/review_12.jpg', isLoggedIn: true});
+            vm.circles.push({imageUrl: 'images/review_01.jpg', isLoggedIn: true});
+            vm.circles.push({imageUrl: 'images/review_02.jpg', isLoggedIn: true});
+            vm.circles.push({imageUrl: 'images/review_03.jpg', isLoggedIn: true});
+            vm.circles.push({imageUrl: 'images/review_04.jpg', isLoggedIn: true});
+            vm.circles.push({imageUrl: 'images/review_07.jpg', isLoggedIn: true});
+            vm.circles.push({imageUrl: 'images/review_08.jpg', isLoggedIn: true});
+            vm.circles.push({imageUrl: 'images/review_09.jpeg', isLoggedIn: true});
+            vm.circles.push({imageUrl: 'images/review_10.jpeg', isLoggedIn: true});
+            vm.circles.push({imageUrl: 'images/review_11.jpg', isLoggedIn: true});
+            vm.circles.push({imageUrl: 'images/review_12.jpg', isLoggedIn: true});
+            vm.circles.push({imageUrl: 'images/review_01.jpg', isLoggedIn: true});
+            vm.circles.push({imageUrl: 'images/review_02.jpg', isLoggedIn: true});
+            vm.circles.push({imageUrl: 'images/review_03.jpg', isLoggedIn: true});
+            vm.circles.push({imageUrl: 'images/review_04.jpg', isLoggedIn: true});
+            vm.circles.push({imageUrl: 'images/review_07.jpg', isLoggedIn: true});
+            vm.circles.push({imageUrl: 'images/review_08.jpg', isLoggedIn: true});
+            vm.circles.push({imageUrl: 'images/review_09.jpeg', isLoggedIn: true});
+            vm.circles.push({imageUrl: 'images/review_10.jpeg', isLoggedIn: true});
+            vm.circles.push({imageUrl: 'images/review_11.jpg', isLoggedIn: true});
+            vm.circles.push({imageUrl: 'images/review_12.jpg', isLoggedIn: true}); 
         }
 
         function onMouseOver(position)
@@ -54,9 +102,8 @@
 
         function onMouseOverBig(position)
         {
-            console.log('llego')
             if(vm.bigCircles[position].isLoggedIn) return;
-            vm.bigCircles[position].previousImageUrl = vm.circles[position].imageUrl;
+            vm.bigCircles[position].previousImageUrl = vm.bigCircles[position].imageUrl;
             vm.bigCircles[position].imageUrl =  'images/review_06.png';
         }
 
@@ -72,12 +119,12 @@
 
         function onMouseOutBig(position)
         {
-            if(!vm.bigCircles[position].isLoggedIn)
-            {
-                vm.bigCircles[position].imageUrl =  'images/review_05.png';
-            }else{
+            // if(!vm.bigCircles[position].isLoggedIn)
+            // {
+            //     vm.bigCircles[position].imageUrl =  'images/review_05.png';
+            // }else{
                 vm.bigCircles[position].imageUrl =  vm.bigCircles[position].previousImageUrl;
-            }
+            // }
         }
         refresh();
     }

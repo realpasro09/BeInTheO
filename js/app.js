@@ -3,5 +3,5 @@
  */
 (function(){
     'use strict';
-    angular.module('beInTheO', ['ngFacebook']);
+    angular.module('beInTheO', ['ngFacebook', 'ngDialog']);
 })();

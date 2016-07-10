@@ -51,8 +51,8 @@ var App = { init: function() { App.HomepageHeight();           // helper script 
 		 ){
 		    $('#maximage_video video').css('display', 'none' );
 		    classie.add( document.getElementById( 'maximage_video' ), 'mobile_novideo' );
-		  };
-	},
+        }
+    },
 	
 	
 	// MaxImage Fullscreen Background Slider
@@ -119,9 +119,8 @@ var App = { init: function() { App.HomepageHeight();           // helper script 
 	    function isValidEmailAddress(emailAddress) {
 	    var pattern = new RegExp(/^(("[\w-+\s]+")|([\w-+]+(?:\.[\w-+]+)*)|("[\w-+\s]+")([\w-+]+(?:\.[\w-+]+)*))(@((?:[\w-+]+\.)*\w[\w-+]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][\d]\.|1[\d]{2}\.|[\d]{1,2}\.))((25[0-5]|2[0-4][\d]|1[\d]{2}|[\d]{1,2})\.){2}(25[0-5]|2[0-4][\d]|1[\d]{2}|[\d]{1,2})\]?$)/i);
 	    return pattern.test(emailAddress);
-		};
-    
-	    $('#subscribe-form').isHappy({
+        }
+        $('#subscribe-form').isHappy({
 	    submitButton: '#subscribe-form-submit',
 	    fields: {
 	      '#email': {
@@ -137,7 +136,7 @@ var App = { init: function() { App.HomepageHeight();           // helper script 
     // Contact Form
     ContactForm: function() {
 	     "use strict";
-	    var options = {target: "#alert"}
+	    var options = {target: "#alert"};
 	    $("#contact-form").ajaxForm(options);
     },
     
@@ -224,8 +223,9 @@ var App = { init: function() { App.HomepageHeight();           // helper script 
 		|| navigator.userAgent.match(/BlackBerry/i)
 		|| navigator.userAgent.match(/Windows Phone/i)
 		 ){} else {
-			 $(window).stellar({responsive: true});	 
-		 };    	
+			 $(window).stellar({responsive: true});
+
+ }
     },
     
     // Reviews Carousel
@@ -246,14 +246,43 @@ var App = { init: function() { App.HomepageHeight();           // helper script 
 			itemsTablet: [600,4], 
 			itemsMobile : [400,2]     
 	    });	
-    },    
+    }
 
-}
+};
 
-$(function() {
-  App.init();
-  $(window).resize(App.HomepageHeight);
-    
-});
+(function(){
+    'use strict';
+    angular.module('beInTheO')
+        .config(config)
+        .run(run);
 
+    function config($facebookProvider) {
+        $facebookProvider.setAppId('293609667652615');
+        $facebookProvider.setPermissions("email");
+        App.init();
+        $(window).resize(App.HomepageHeight);
+    }
+
+    function run($rootScope) {
+        (function(){
+            // If we've already installed the SDK, we're done
+            if (document.getElementById('facebook-jssdk')) {return;}
+
+            // Get the first script element, which we'll use to find the parent node
+            var firstScriptElement = document.getElementsByTagName('script')[0];
+
+            // Create a new script element and set its id
+            var facebookJS = document.createElement('script');
+            facebookJS.id = 'facebook-jssdk';
+
+            // Set the new script's source to the source of the Facebook JS SDK
+            facebookJS.src = '//connect.facebook.net/en_US/all.js';
+
+            // Insert the Facebook JS SDK into the DOM
+            firstScriptElement.parentNode.insertBefore(facebookJS, firstScriptElement);
+        }());
+    }
+
+})();
 })(jQuery);
+

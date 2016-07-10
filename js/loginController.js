@@ -6,17 +6,22 @@
     angular.module('beInTheO')
         .controller('LoginCtrl', LoginCtrl);
 
-    function LoginCtrl($facebook) {
+    function LoginCtrl($facebook, ngDialog) {
         var vm = this;
         vm.circles = [];
         vm.bigCircles = [];
         initializeCircles();
         vm.login = function(position) {
-            console.log("logeandome");
-            $facebook.login().then(function() {
-                refresh(position);
-            });
+            vm.clickToOpen();
+            // console.log("logeandome");
+            // $facebook.login().then(function() {
+            //     refresh(position);
+            // });
         };
+
+    vm.clickToOpen = function () {
+       ngDialog.open({ template: 'promotionTemplate.html', className: 'ngdialog-theme-default' });
+   };
 
         vm.onMouseOver = onMouseOver;
         vm.onMouseOut = onMouseOut;

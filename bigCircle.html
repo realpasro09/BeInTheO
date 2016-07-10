@@ -65,25 +65,8 @@
 	  			</nav>
 			</div>
 		</header><!-- // Menu bar -->
-	
-		
-		<!-- More Info #################### -->
+
 		<section ng-controller="LoginCtrl as vm" id="more_info" data-animate-down="menu_bar-show" data-animate-up="menu_bar-hide" class="menu_bar-waypoint subsection">
-			<div class="container"  style="margin-top: 10px; margin-left:10px; margin-right: 10px; width: 100%">
-				<ul id="navlist">
-					<li ng-repeat="circle in vm.bigCircles">
-						<a href="./bigCircle.html">
-						<img ng-src="{{ circle.imageUrl }}" ng-mouseover="vm.onMouseOverBig($index)"  ng-mouseleave="vm.onMouseOutBig($index)" alt="" class="img-bigcircle">
-						</a>
-					</li>
-					</ul>
-			<div id="fb-root" />
-			</div>
-			
-		</section><!-- //More info -->
-		
-		<section ng-controller="LoginCtrl as vm" id="more_info1" data-animate-down="menu_bar-show" data-animate-up="menu_bar-hide" class="menu_bar-waypoint subsection">
-			<h1>Be part of the circle</h1>
 			<div class="container"  style="margin-top: 10px; margin-left:10px; margin-right: 10px; width: 100%">
 				<ul id="navlist">
 					<li ng-repeat="circle in vm.circles">
@@ -94,6 +77,8 @@
 			</div>
 			
 		</section><!-- //More info -->
+		
+
 	</div><!-- //preloader -->
 	
    

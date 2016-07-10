@@ -40,7 +40,7 @@ Author:         Mat Przegietka
 .img-circle {border-radius: 50%; width: 80px; height: 80px}
 .img-circle:hover {cursor: pointer}
 
-.img-bigcircle {border-radius: 50%; width: 250px; height: 250px}
+.img-bigcircle {border-radius: 50%; width: 200px; height: 200px}
 .img-bigcircle:hover {cursor: pointer}
 
 /*--------------------------------------*/

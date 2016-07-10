@@ -1,0 +1,18 @@
+{
+  "name": "BeInTheO",
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "client/src/components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "ng-facebook": "^0.1.6"
+  }
+}
